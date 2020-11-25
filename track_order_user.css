@@ -1,0 +1,201 @@
+$pallet-1: #e0ece4;
+$pallet-2: #ff4b5c;
+$pallet-3: #056674;
+$pallet-4: #66bfbf;
+
+
+$breakpoint-sm: 375px;
+$breakpoint-md: 960px;
+$breakpoint-lg: 1400px;
+$breakpoint-xl: 1920px;
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: helvetica;
+}
+
+.drybn-hero.drybn-hero--search{
+  width: 100%;
+  height: auto;
+}
+
+.drybn-hero--search__overlay{
+  background-image: url('difference-between-cargo-and-freight.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.drybn-hero--search__content{
+  background: rgba(19, 197, 252, 0.95);
+  backdrop-filter: blur(5px);
+  width: calc(100% - 2rem);
+  max-width: calc(800px + 2rem);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.drybn-hero--search__content .hero-heading{
+  color: white;
+  padding: 0 1rem;
+}
+
+.drybn-hero--search__content .hero-search{
+  padding: 0 1rem 1.5rem;
+  width: calc(100% - 2rem);
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.drybn-hero--search__content .hero-search input{
+  padding: 0.5rem 1rem;
+  width: calc(100% - 2rem);
+  border: 2px solid $pallet-4;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+
+.drybn-hero--search__content .hero-search button{
+  padding: 0.5rem 1rem;
+  background-color: $pallet-1;
+  border: 2px solid $pallet-4;
+  border-radius: 0 8px 8px 0;
+  color: $pallet-3;
+  transition: 800ms;
+}
+
+.drybn-hero--search__content .hero-search button:hover{
+  background-color: $pallet-3;
+  border: 2px solid $pallet-4;
+  color: $pallet-1;
+  cursor: pointer;
+}
+
+//-------------------------------------------//
+
+.drybn-kicker__content{
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  background-color: $pallet-3;
+  color: $pallet-1;
+  border-top: 4px solid $pallet-4;
+  border-bottom: 4px solid $pallet-4;
+}
+
+.drybn-kicker__content h2{
+  width: calc(100% - 2rem);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+
+.drybn-full-width-media-text{
+  background-color: $pallet-1;
+  padding: 3rem 1rem;
+  min-height: 800px;
+  position: relative;
+}
+
+.drybn-full-width-media-text .drybn-full-width-media-text__content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0 1rem;
+}
+
+.drybn-full-width-media-text .drybn-copy{
+  text-align: center;
+}
+
+.drybn-full-width-media-text h1{
+  font-size: 2.5rem;
+  color: $pallet-3;
+  margin: 0.5rem auto;
+}
+
+.drybn-full-width-media-text h2{
+  font-size: 1.25rem;
+  color: $pallet-2;
+  text-transform: uppercase;
+  margin: 0.5rem auto;
+}
+
+.drybn-full-width-media-text p{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $pallet-4;
+  max-width: 300px;
+  margin: 0.5rem auto 1rem;
+}
+
+.drybn-full-width-media-text a{
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $pallet-4;
+  background-color: $pallet-1;
+  display: block;
+  padding: 1rem;
+  border: 2px solid $pallet-3;
+  border-radius: 16px;
+  max-width: 220px;
+  margin: 0 auto;
+  transition: 800ms;
+}
+
+.drybn-full-width-media-text a:hover{
+  background: $pallet-2;
+  color: $pallet-1;
+}
+
+.drybn-full-width-media-text .drybn-image{
+  width: 100%;
+  height: auto;
+}
+
+.drybn-full-width-media-text .drybn-image img{
+  width: 100%;
+}
+
+/*
+**  MD BREAKPOINT
+*/
+@media only screen and (min-width:#{$breakpoint-md}){
+  
+  .drybn-full-width-media-text .drybn-full-width-media-text__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+  }
+  
+  .drybn-full-width-media-text .drybn-image{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .drybn-full-width-media-text .drybn-copy{
+    grid-column: 1;
+    grid-row: 1;
+    height: fit-content;
+    width: fit-content;
+    margin: auto 0 auto auto;
+  }
+}
